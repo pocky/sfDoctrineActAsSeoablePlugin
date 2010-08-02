@@ -1,6 +1,6 @@
 # Information #
 
-Pensé pour le CMS [peanut](http://github.com/pocky/peanut), ce plugin peut cependant fonctionner sur n'importe qu'elle projet symfony avec peu de modifications.
+Pensé pour le CMS [peanut](http://github.com/pocky/peanut), ce plugin peut cependant fonctionner sur n'importe quel projet symfony avec peu de modifications.
 
 # Installation #
 
