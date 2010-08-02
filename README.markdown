@@ -1,10 +1,12 @@
 # Information #
 
-Pensé pour le CMS [peanut](http://github.com/pocky/peanut), ce plugin peut cependant fonctionner sur n'importe quel projet symfony avec peu de modifications.
+Pensé pour le CMS [peanut](http://github.com/pocky/peanut), ce behavior fonctionner sur n'importe quel projet symfony.
+
+Etant donné mes limites techniques, le plugin peanutSeoPlugin repose sur ce behavior car je ne vois pas encore comment créer d'une façon totalement dynamique le sitemap qui viendrait compléter le plugin.
 
 # Installation #
 
-    $ git clone git://github.com/pocky/peanutSeoPlugin.git
+    $ git clone git://github.com/pocky/sfDoctrineActAsSeoablePlugin.git
 
 # Activer le plugin #
 
@@ -12,7 +14,7 @@ __Dans config/ProjectConfiguration.class.php__
 
     $this->enablePlugins(array(
       [...],
-      'peanutSeoPlugin',
+      'sfDoctrineActAsSeoablePlugin',
     ));
 
 __puis__
