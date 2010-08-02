@@ -1,1 +1,1 @@
-# Plugin en cours de developpement #
+__Plugin en cours de développement__
