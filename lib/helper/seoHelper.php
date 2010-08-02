@@ -1,11 +1,30 @@
 <?php
 
-function seoTitle($object, $options = array())
+function seo($role, $object, $options = array())
 {
+
+  if($role == 'title' || $role == 'description' || $role == 'keywords')
+  {
+    seoMeta($role, $object, $options = array());
+  }
+  elseif($role == 'index')
+  {
+    seoIndex($object);
+  }
+  else
+  {
+    return null;
+  }
+
+}
+
+function seoMeta($role, $object, $options = array())
+{
+  $object = $object->getPeanutSeo()->$role;
   
   if($object)
   {
-    return slot('title', sprintf($object)); 
+    return slot($role, sprintf($object)); 
   }
   else
   {
@@ -14,35 +33,6 @@ function seoTitle($object, $options = array())
   
 }
 
-function seoDescription($object, $options = array())
-{
-  $object = $object->getPeanutSeo()->getDescription();
-  
-  if($object)
-  {
-    return slot('description', sprintf($object)); 
-  }
-  else
-  {
-    return null;
-  }
-  
-}
-
-function seoKeywords($object, $options = array())
-{
-  $object = $object->getPeanutSeo()->getKeywords();
-  
-  if($object)
-  {
-    return slot('keywords', sprintf($object)); 
-  }
-  else
-  {
-    return null;
-  }
-  
-}
 
 function seoIndex($object)
 {

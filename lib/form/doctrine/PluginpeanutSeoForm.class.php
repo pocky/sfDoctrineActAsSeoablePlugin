@@ -17,12 +17,12 @@ abstract class PluginpeanutSeoForm extends BasepeanutSeoForm
     
     
     $this->widgetSchema['is_indexable'] = new sfWidgetFormChoice(array(
-    	'choices'	=>	array(1 => 'follow', 0 => 'nofollow'),
+    	'choices'	=>	array(0 => 'noindex', 1 => 'index'),
     	'expanded'	=>	false,
     ));
     
     $this->widgetSchema['is_followable'] = new sfWidgetFormChoice(array(
-    	'choices'	=>	array(1 => 'index', 0 => 'noindex'),
+    	'choices'	=>	array(0 => 'nofollow', 1 => 'follow'),
     	'expanded'	=>	false,
     ));
     
